@@ -1,0 +1,8 @@
+
+func (bus *baseBus) SetChannelDispatch(FxchanDisp interface{}, param interface{}) {
+	f := reflect.ValueOf(FxchanDisp)
+	var fnxdisp CbBusChanDisp = nil
+	pfnx := reflect.ValueOf(&fnxdisp).Elem()
+	pfnx.Set(f)
+
+}
